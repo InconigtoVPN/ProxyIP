@@ -8,7 +8,7 @@ const RAW_PROXY_LIST_FILE = "./rawProxyList.txt";
 const PROXY_LIST_FILE = "./proxyList.txt";
 const IP_RESOLVER_DOMAIN = "myip.shylook.workers.dev";
 const IP_RESOLVER_PATH = "/";
-const CONCURRENCY = os.cpus().length * 99; // Meningkatkan concurrency untuk performa lebih cepat
+const CONCURRENCY = os.cpus().length * 99; // Maksimal concurrency untuk kecepatan tinggi
 
 async function sendRequest(host, path, proxy = null) {
   return new Promise((resolve, reject) => {
@@ -27,7 +27,7 @@ async function sendRequest(host, path, proxy = null) {
     socket.on("data", (data) => (responseBody += data.toString()));
     socket.on("end", () => resolve(responseBody.split("\r\n\r\n")[1] || ""));
     socket.on("error", (error) => reject(error));
-    socket.setTimeout(2000, () => { // Timeout dipercepat
+    socket.setTimeout(1500, () => { // Timeout lebih cepat
       reject(new Error("Request timeout"));
       socket.end();
     });
@@ -35,7 +35,7 @@ async function sendRequest(host, path, proxy = null) {
 }
 
 async function checkProxy(proxyAddress, proxyPort) {
-  console.log(`Checking proxy: ${proxyAddress}:${proxyPort}`);
+  console.log(`[INFO] Checking: ${proxyAddress}:${proxyPort}`);
   try {
     const proxyInfo = { host: proxyAddress, port: proxyPort };
     const [ipinfo, myip] = await Promise.allSettled([
@@ -48,7 +48,7 @@ async function checkProxy(proxyAddress, proxyPort) {
       const parsedMyIp = JSON.parse(myip.value);
       
       if (parsedIpInfo.ip && parsedIpInfo.ip !== parsedMyIp.ip) {
-        console.log(`Valid proxy: ${proxyAddress}:${proxyPort} -> ${parsedIpInfo.ip}`);
+        console.log(`[SUCCESS] Proxy valid: ${proxyAddress}:${proxyPort} -> ${parsedIpInfo.ip}`);
         return {
           error: false,
           result: {
@@ -62,10 +62,10 @@ async function checkProxy(proxyAddress, proxyPort) {
       }
     }
   } catch (error) {
-    console.log(`Error checking proxy: ${proxyAddress}:${proxyPort} - ${error.message}`);
+    console.log(`[ERROR] Proxy failed: ${proxyAddress}:${proxyPort} - ${error.message}`);
     return { error: true, message: error.message };
   }
-  console.log(`Invalid proxy: ${proxyAddress}:${proxyPort}`);
+  console.log(`[FAIL] Proxy invalid: ${proxyAddress}:${proxyPort}`);
   return { error: true, message: "Proxy test failed" };
 }
 
@@ -83,7 +83,7 @@ if (isMainThread) {
     const activeProxyList = [];
     const kvPair = {};
 
-    console.log(`Checking ${proxyList.length} proxies with ${CONCURRENCY} threads...`);
+    console.log(`[INFO] Checking ${proxyList.length} proxies with ${CONCURRENCY} threads...`);
 
     const workerPromises = proxyList.map((proxy) => {
       return new Promise((resolve) => {
@@ -109,7 +109,7 @@ if (isMainThread) {
     await fs.writeFile(KV_PAIR_PROXY_FILE, JSON.stringify(kvPair, null, 2));
     await fs.writeFile(PROXY_LIST_FILE, activeProxyList.join("\n"));
 
-    console.log("Proxy checking completed!");
+    console.log("[INFO] Proxy checking completed!");
     process.exit(0);
   })();
 } else {
