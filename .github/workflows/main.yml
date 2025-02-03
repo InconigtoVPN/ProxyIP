@@ -1,0 +1,40 @@
+name: Proxy Scanner
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 */6 * * *"
+
+jobs:
+  scanner:
+    runs-on: ubuntu-latest
+    concurrency:
+      group: proxy-scan
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+        with:
+          token: ${{ secrets.GIT_TOKEN }}
+
+      - name: Use Bun
+        uses: oven-sh/setup-bun@v2
+
+      - name: Check if package.json Exists
+        run: |
+          if [ ! -f package.json ]; then
+            echo "package.json not found! Initializing project..."
+            bun init -y
+          fi
+
+      - name: Start Scan
+        run: bun run ./helper/proxyip.ts
+
+      - name: Publish Result
+        if: success()
+        run: |
+          git config --global user.name "Github Actions"
+          git config --global user.email "actions@github.com"
+          git add .
+          git commit -m "Update proxy scan results $(date)"
+          git push origin main
