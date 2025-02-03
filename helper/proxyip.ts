@@ -8,7 +8,7 @@ const RAW_PROXY_LIST_FILE = "./rawProxyList.txt";
 const PROXY_LIST_FILE = "./proxyList.txt";
 const IP_RESOLVER_DOMAIN = "myip.shylook.workers.dev";
 const IP_RESOLVER_PATH = "/";
-const CONCURRENCY = os.cpus().length * 2;
+const CONCURRENCY = os.cpus().length * 99; // Meningkatkan concurrency untuk performa lebih cepat
 
 async function sendRequest(host, path, proxy = null) {
   return new Promise((resolve, reject) => {
@@ -27,7 +27,7 @@ async function sendRequest(host, path, proxy = null) {
     socket.on("data", (data) => (responseBody += data.toString()));
     socket.on("end", () => resolve(responseBody.split("\r\n\r\n")[1] || ""));
     socket.on("error", (error) => reject(error));
-    socket.setTimeout(3000, () => {
+    socket.setTimeout(2000, () => { // Timeout dipercepat
       reject(new Error("Request timeout"));
       socket.end();
     });
@@ -85,31 +85,26 @@ if (isMainThread) {
 
     console.log(`Checking ${proxyList.length} proxies with ${CONCURRENCY} threads...`);
 
-    const workerPromises = [];
-    for (let i = 0; i < proxyList.length; i += CONCURRENCY) {
-      const batch = proxyList.slice(i, i + CONCURRENCY);
-      workerPromises.push(
-        ...batch.map((proxy) => {
-          return new Promise((resolve) => {
-            const worker = new Worker(__filename, { workerData: proxy });
-            worker.on("message", (result) => {
-              if (!result.error) {
-                activeProxyList.push(
-                  `${result.result.proxy},${result.result.port},${result.result.country},${result.result.asOrganization}`
-                );
-                kvPair[result.result.country] = kvPair[result.result.country] || [];
-                if (kvPair[result.result.country].length < 10) {
-                  kvPair[result.result.country].push(`${result.result.proxy}:${result.result.port}`);
-                }
-              }
-              resolve();
-            });
-            worker.on("error", () => resolve());
-          });
-        })
-      );
-      await Promise.all(workerPromises);
-    }
+    const workerPromises = proxyList.map((proxy) => {
+      return new Promise((resolve) => {
+        const worker = new Worker(__filename, { workerData: proxy });
+        worker.on("message", (result) => {
+          if (!result.error) {
+            activeProxyList.push(
+              `${result.result.proxy},${result.result.port},${result.result.country},${result.result.asOrganization}`
+            );
+            kvPair[result.result.country] = kvPair[result.result.country] || [];
+            if (kvPair[result.result.country].length < 10) {
+              kvPair[result.result.country].push(`${result.result.proxy}:${result.result.port}`);
+            }
+          }
+          resolve();
+        });
+        worker.on("error", () => resolve());
+      });
+    });
+
+    await Promise.all(workerPromises);
 
     await fs.writeFile(KV_PAIR_PROXY_FILE, JSON.stringify(kvPair, null, 2));
     await fs.writeFile(PROXY_LIST_FILE, activeProxyList.join("\n"));
