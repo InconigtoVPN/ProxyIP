@@ -35,6 +35,7 @@ async function sendRequest(host, path, proxy = null) {
 }
 
 async function checkProxy(proxyAddress, proxyPort) {
+  console.log(`Checking proxy: ${proxyAddress}:${proxyPort}`);
   try {
     const proxyInfo = { host: proxyAddress, port: proxyPort };
     const [ipinfo, myip] = await Promise.allSettled([
@@ -47,6 +48,7 @@ async function checkProxy(proxyAddress, proxyPort) {
       const parsedMyIp = JSON.parse(myip.value);
       
       if (parsedIpInfo.ip && parsedIpInfo.ip !== parsedMyIp.ip) {
+        console.log(`Valid proxy: ${proxyAddress}:${proxyPort} -> ${parsedIpInfo.ip}`);
         return {
           error: false,
           result: {
@@ -60,8 +62,10 @@ async function checkProxy(proxyAddress, proxyPort) {
       }
     }
   } catch (error) {
+    console.log(`Error checking proxy: ${proxyAddress}:${proxyPort} - ${error.message}`);
     return { error: true, message: error.message };
   }
+  console.log(`Invalid proxy: ${proxyAddress}:${proxyPort}`);
   return { error: true, message: "Proxy test failed" };
 }
 
