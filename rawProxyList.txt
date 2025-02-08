@@ -1,3 +1,19 @@
+45.60.186.91,443,ID,Incapsula
+103.133.223.50,2096,ID,Cloud Teknologi Nusantara
+103.168.146.169,20132,ID,Herza.ID
+43.133.145.156,53136,ID,Shenzhen Tencent Computer Systems Company Limited
+172.232.239.249,587,ID,Akamai Connected Cloud
+35.219.50.99,443,ID,Google LLC
+43.218.77.16,1443,ID,Amazon.com
+203.194.112.119,8443,ID,CV Rumahweb Indonesia
+172.232.239.147,587,ID,Akamai Connected Cloud
+172.232.239.151,587,ID,Akamai Technologies Inc
+103.133.223.51,2096,ID,PT Cloud Teknologi Nusantara
+203.194.112.119,2053,ID,Rumahweb
+103.186.1.209,2053,ID,PT Cloud Hosting Indonesia
+103.133.223.52,2096,ID,Cloud Teknologi Nusantara
+172.232.231.24,587,ID,Akamai Connected Cloud
+8.218.107.145,31166,ID,PT Cloud Hosting Indonesia
 47.74.254.191,8900,SG,Alibaba
 45.77.171.102,3128,SG,Vultr
 139.180.144.170,666,SG,Vultr
@@ -5631,22 +5647,6 @@
 95.164.23.71,443,HU,STARK INDUSTRIES SOLUTIONS LTD
 86.104.75.143,443,HU,STARK INDUSTRIES SOLUTIONS LTD
 77.91.72.82,443,HU,Stark Industries Solutions LTD
-45.60.186.91,443,ID,Incapsula
-103.133.223.50,2096,ID,Cloud Teknologi Nusantara
-103.168.146.169,20132,ID,Herza.ID
-43.133.145.156,53136,ID,Shenzhen Tencent Computer Systems Company Limited
-172.232.239.249,587,ID,Akamai Connected Cloud
-35.219.50.99,443,ID,Google LLC
-43.218.77.16,1443,ID,Amazon.com
-203.194.112.119,8443,ID,CV Rumahweb Indonesia
-172.232.239.147,587,ID,Akamai Connected Cloud
-172.232.239.151,587,ID,Akamai Technologies Inc
-103.133.223.51,2096,ID,PT Cloud Teknologi Nusantara
-203.194.112.119,2053,ID,Rumahweb
-103.186.1.209,2053,ID,PT Cloud Hosting Indonesia
-103.133.223.52,2096,ID,Cloud Teknologi Nusantara
-172.232.231.24,587,ID,Akamai Connected Cloud
-8.218.107.145,31166,ID,PT Cloud Hosting Indonesia
 40.113.60.248,2053,IE,Microsoft Azure
 52.169.27.133,2053,IE,Microsoft Azure
 38.180.21.33,443,IE,M247 Europe SRL
