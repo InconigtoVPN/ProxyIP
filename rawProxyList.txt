@@ -313,7 +313,7 @@
 43.133.10.236,33405,JP,Tencent Building Kejizhongyi Avenue
 45.76.192.129,24434,JP,The Constant Company LLC
 45.76.195.196,26731,JP,The Constant Company LLC
-47.91.18.127,443,JP,Alibaba (US) Technology Co Ltd
+47.91.18.127,443,JP,Alibaba Technology Co Ltd
 5.253.41.86,2053,JP,STARK INDUSTRIES SOLUTIONS LTD
 48.218.160.250,2053,JP,Microsoft Corporation
 54.248.121.219,443,JP,Amazon.com Inc
@@ -1058,13 +1058,13 @@
 172.104.170.159,2053,SG,Akamai Connected Cloud
 18.141.114.130,52132,SG,Amazon.com Inc
 178.128.91.137,443,SG,DigitalOcean LLC
-8.219.77.72,5027,SG,Alibaba (US) Technology Co Ltd
-8.222.173.58,23390,SG,Alibaba (US) Technology Co Ltd
-8.222.165.104,443,SG,Alibaba (US) Technology Co Ltd
+8.219.77.72,5027,SG,Alibaba Technology Co Ltd
+8.222.173.58,23390,SG,Alibaba Technology Co Ltd
+8.222.165.104,443,SG,Alibaba Technology Co Ltd
 83.142.30.129,2096,SG,Streamline Servers Pty Ltd
 84.247.49.211,8443,SG,M247 Europe SRL
 84.247.49.210,8443,SG,M247 Europe SRL
-8.222.178.214,6666,SG,Alibaba (US) Technology Co Ltd
+8.222.178.214,6666,SG,Alibaba Technology Co Ltd
 83.142.30.4,2096,SG,Streamline Servers Pty Ltd
 91.192.81.154,8443,SG,Melbikomas UAB
 13.250.131.37,443,SG,Amazon.com
@@ -1100,7 +1100,7 @@
 45.76.156.96,2053,SG,The Constant Company LLC
 43.156.6.97,10392,SG,Tencent Building Kejizhongyi Avenue
 43.156.253.94,443,SG,Tencent Building Kejizhongyi Avenue
-47.245.91.197,9000,SG,Alibaba (US) Technology Co Ltd
+47.245.91.197,9000,SG,Alibaba Technology Co Ltd
 51.79.161.46,20380,SG,OVH SAS
 51.79.145.13,8443,SG,OVH SAS
 51.79.158.58,2053,SG,OVH SAS
@@ -1108,4 +1108,4 @@
 51.79.161.46,50622,SG,OVH SAS
 64.49.14.41,2053,SG,Latitude.sh
 52.187.95.20,2053,SG,Microsoft Corporation
-64.49.14.41,8443,SG,Latitude.sh
+64.49.14.41,8443,SG,Latitude.sh
