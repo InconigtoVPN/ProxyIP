@@ -244,4 +244,4 @@
 51.79.161.46,50622,SG,OVH SAS
 64.49.14.41,2053,SG,Latitude.sh
 52.187.95.20,2053,SG,Microsoft Corporation
-64.49.14.41,8443,SG,Latitude.sh
+64.49.14.41,8443,SG,Latitude.sh
