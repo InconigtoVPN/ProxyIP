@@ -1,4 +1,4 @@
-36.95.152.58:12137,ID,PT Telekomunikasi
+36.95.152.58,12137,ID,PT Telekomunikasi
 103.168.146.169,20132,ID,Herza.ID
 103.6.207.108,8080,ID,PT Pusat Media Indonesia
 149.129.250.187,443,ID,Alibaba
