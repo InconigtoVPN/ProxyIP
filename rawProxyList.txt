@@ -1,3 +1,4 @@
+45.87.103.154,57012,HK,Nearoute Limited
 36.95.152.58,12137,ID,PT Telekomunikasi
 103.6.207.108,8080,ID,Pt Pusat Media Indonesia
 35.219.15.90,443,ID,Google LLC
@@ -5,6 +6,7 @@
 43.218.77.16,1443,ID,Amazon.com Inc.
 43.218.77.16,443,ID,Amazon.com Inc.
 172.232.239.151,587,ID,Akamai Technologies Inc.
+77.221.133.147,443,NL,Iron Hosting Centre LTD
 47.74.254.191,8900,SG,Alibaba us Technology Co. Ltd.
 129.150.58.86,57621,SG,Oracle Corporation
 146.235.18.248,45137,SG,Oracle Corporation
@@ -36,7 +38,6 @@
 8.219.237.57,31523,SG,Alibaba us Technology Co. Ltd.
 62.72.46.14,8443,SG,Contabo Asia Private Limited
 139.180.215.77,57878,SG,The Constant Company LLC
-77.221.133.147,443,NL,Iron Hosting Centre LTD
 8.222.129.175,58808,SG,Alibaba us Technology Co. Ltd.
 143.42.68.97,17055,SG,Akamai Technologies Inc.
 47.236.181.185,8443,SG,Alibaba us Technology Co. Ltd.
@@ -120,7 +121,6 @@
 83.142.30.4,2096,SG,Streamline Servers Pty LTD
 91.192.81.154,8443,SG,Melbikomas Uab
 154.91.84.10,8443,SG,Tcloudnet
-45.87.103.154,57012,HK,Nearoute Limited
 194.36.178.36,2053,SG,FIRST SERVER LIMITED
 185.81.29.113,8080,SG,AKILE LTD
 194.36.179.17,2053,SG,FIRST SERVER LIMITED
@@ -142,4 +142,4 @@
 51.79.158.58,2053,SG,OVH SAS
 5.34.176.119,81,SG,GREEN FLOID LLC
 64.49.14.41,2053,SG,Latitude.sh
-64.49.14.41,8443,SG,Latitude.sh
+64.49.14.41,8443,SG,Latitude.sh
