@@ -13457,4 +13457,4 @@
 103.98.149.96,58904,VN,Maxserver Company
 123.58.199.241,443,VN,Ucloud Information Technology Hk
 152.32.255.24,587,VN,Ucloud Information Technology Hk
-62.113.200.221,443,ZA,23Media GmbH
+62.113.200.221,443,ZA,23Media GmbH
