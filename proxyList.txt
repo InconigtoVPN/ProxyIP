@@ -1,40 +1,15 @@
-103.78.113.36,443,ID,Pt Mora Telematika
-111.95.40.14,10548,ID,FirstMedia
-111.95.40.14,12558,ID,FirstMedia
-172.232.239.249,587,ID,Akamai
-172.232.239.175,587,ID,Akamai
-172.232.239.134,587,ID,Akamai
-172.232.239.147,587,ID,Akamai
-111.95.40.14,32414,ID,Linknet Fastnet
-38.60.171.111,587,ID,Kaopu Cloud
-147.139.245.56,443,ID,Alibaba
-147.139.243.188,587,ID,Alibaba
-172.232.239.151,587,ID,Akamai
-165.154.48.233,587,ID,Ucloud Information Technology Hk
-103.133.223.50,2096,ID,Cloud Teknologi Nusantara
-103.133.223.51,2096,ID,Cloud Teknologi Nusantara
-43.133.145.156,53136,ID,Tencent cloud computing
-8.215.23.33,587,ID,Alibaba
-8.215.23.109,587,ID,Alibaba
-103.133.223.52,2096,ID,Cloud Teknologi Nusantara
-101.50.0.114,8443,ID,PT Beon Multimedia
-203.194.112.119,2053,ID,Rumahweb
 35.219.50.99,443,ID,Google LLC
 35.219.15.90,443,ID,Google LLC
-172.232.239.151,587,ID,Linode
-103.133.223.51,2096,ID,Pt Cloud Teknologi Nusantara
-8.215.23.109,587,ID,Alibaba Cloud singapore Private Limited
-43.133.145.156,53136,ID,COLLYER QUAY
 203.194.112.119,2053,ID,Rumahweb
 203.194.112.119,8443,ID,Rumahweb
-103.133.223.50,2096,ID,Pt Cloud Teknologi Nusantara
-103.186.1.209,2053,ID,Cv Ansa Project
-103.186.1.209,8443,ID,Cv Ansa Project
-101.50.0.114,2053,ID,Pt. Beon Intermedia
-101.50.0.114,8443,ID,Pt. Beon Intermedia
-8.215.23.33,587,ID,Alibaba Cloud singapore Private Limited
-165.154.48.233,587,ID,UCLOUD INFORMATION TECHNOLOGY HK LIMITED
-103.133.223.52,2096,ID,Pt Cloud Teknologi Nusantara
+8.215.196.18,587,ID,Alibaba 
+36.95.152.58,12137,ID,PT Telkom Indonesia 
+43.218.77.16,443,ID,Amazon 
+43.218.77.16,1443,ID,Amazon
+103.6.207.108,8080,ID,PT Pusat Media Indonesia 
+172.232.239.147,587,ID,Akamai Connected Cloud 
+172.232.239.151,587,ID,Akamai Connected Cloud 
+172.232.239.249,587,ID,Akamai Connected Cloud 
 178.62.17.85,443,GB,Digital Ocean
 5.161.217.101,8443,US,Hetzner Online
 129.150.58.86,57621,SG,Oracle Cloud
